@@ -54,4 +54,3 @@ export const FOOTER_COLUMNS = {
     { label: "Start a Project", href: "/contact" },
   ],
 } as const;
-

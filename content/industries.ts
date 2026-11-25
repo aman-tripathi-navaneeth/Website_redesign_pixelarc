@@ -41,4 +41,3 @@ export const INDUSTRIES: IndustryItem[] = [
     summary: "Client onboarding, advisory portals, and audit-ready compliance workflows.",
   },
 ];
-

@@ -11,10 +11,7 @@ const EASE_OUT = [0.16, 1, 0.3, 1] as const;
 
 export function Hero() {
   return (
-    <section
-      aria-labelledby="hero-heading"
-      className="surface-ivory relative overflow-hidden"
-    >
+    <section aria-labelledby="hero-heading" className="surface-ivory relative overflow-hidden">
       {/* Hidden SVG clipPath defining the sweeping architectural curve on desktop */}
       <svg aria-hidden="true" className="pointer-events-none absolute h-0 w-0">
         <defs>
@@ -25,7 +22,7 @@ export function Hero() {
       </svg>
 
       <div className="relative mx-auto max-w-[1440px]">
-        <div className="grid grid-cols-1 items-start lg:h-[calc(100dvh-5rem)] lg:min-h-[520px] lg:max-h-[740px] lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-start lg:h-[calc(100dvh-5rem)] lg:max-h-[740px] lg:min-h-[520px] lg:grid-cols-12">
           {/* Left area (~44%): Eyebrow, Fraunces headline, copy, CTAs, positioning strip */}
           <div className="relative z-10 flex flex-col items-start gap-3.5 px-5 pt-6 pb-5 sm:px-8 lg:col-span-5 lg:gap-3.5 lg:pt-7 lg:pr-4 lg:pb-5 lg:pl-14 xl:gap-4 xl:pt-9 xl:pl-[4.5rem]">
             <motion.div

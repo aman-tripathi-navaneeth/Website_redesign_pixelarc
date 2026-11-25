@@ -34,10 +34,7 @@ const METRICS: MetricItem[] = [
 
 export function MetricsStrip() {
   return (
-    <section
-      aria-label="Key practice metrics"
-      className="surface-pine border-y border-pine-border"
-    >
+    <section aria-label="Key practice metrics" className="surface-pine border-y border-pine-border">
       <div className="pa-container">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -71,4 +68,3 @@ export function MetricsStrip() {
     </section>
   );
 }
-

@@ -54,4 +54,3 @@ export const TESTIMONIALS: Testimonial[] = [
     industry: "Logistics",
   },
 ];
-
