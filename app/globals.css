@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Pixel Arc Design System — Editorial Redesign
+   Palette split: 70% Ivory + Sand / 20% Deep Pine / 10% Brass
+   Strict rules: Flat colours only, no #000 or #FFF, no gradients or glows.
+   ========================================================================== */
+
+:root {
+  --ivory: #f3eee4;
+  --pine: #0f2a24;
+  --brass: #b8893b;
+  --sand: #dcd3c0;
+  --muted-ink: #6f6a5e;
+  --pine-border: #25433c;
+  --terracotta: #8f3d2e;
+
+  --background: var(--ivory);
+  --foreground: var(--pine);
+  --card: var(--ivory);
+  --card-foreground: var(--pine);
+  --popover: var(--ivory);
+  --popover-foreground: var(--pine);
+  --primary: var(--pine);
+  --primary-foreground: var(--ivory);
+  --secondary: var(--sand);
+  --secondary-foreground: var(--pine);
+  --muted: var(--sand);
+  --muted-foreground: var(--muted-ink);
+  --accent: var(--brass);
+  --accent-foreground: var(--pine);
+  --destructive: var(--terracotta);
+  --destructive-foreground: var(--ivory);
+  --border: var(--sand);
+  --input: var(--sand);
+  --ring: var(--brass);
+
+  --radius: 2px;
+
+  --text-hero: clamp(2.65rem, 4.9vw, 5.15rem);
+  --text-display: clamp(2.125rem, 3.8vw, 3.65rem);
+  --text-title: clamp(1.5rem, 2.4vw, 2.25rem);
+  --text-body: clamp(1.0625rem, 0.98rem + 0.16vw, 1.125rem);
+  --text-label: 0.75rem;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-pine: var(--pine);
+  --color-brass: var(--brass);
+  --color-sand: var(--sand);
+  --color-muted-ink: var(--muted-ink);
+  --color-pine-border: var(--pine-border);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 1px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+}
+
+.surface-pine {
+  --background: var(--pine);
+  --foreground: var(--ivory);
+  --card: var(--pine);
+  --card-foreground: var(--ivory);
+  --popover: var(--pine);
+  --popover-foreground: var(--ivory);
+  --primary: var(--brass);
+  --primary-foreground: var(--pine);
+  --secondary: var(--pine-border);
+  --secondary-foreground: var(--ivory);
+  --muted: var(--pine-border);
+  --muted-foreground: var(--sand);
+  --border: var(--pine-border);
+  --input: var(--pine-border);
+  --ring: var(--brass);
+  background-color: var(--pine);
+  color: var(--ivory);
+}
+
+.surface-ivory {
+  background-color: var(--ivory);
+  color: var(--pine);
+  position: relative;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    background-color: var(--ivory);
+    color: var(--pine);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 96;
+  }
+
+  ::selection {
+    background-color: var(--brass);
+    color: var(--pine);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+  }
+}
+
+.text-hero {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: var(--text-hero);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.text-display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: var(--text-display);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.text-mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pa-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4.5vw, 4.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
